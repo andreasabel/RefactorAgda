@@ -2,6 +2,7 @@
 module ScopeState where
 open import Data.List using (List) renaming ([] to emptyList ; map to listMap ; _∷_ to _cons_)
 open import Data.String renaming (_++_ to _then_)
+open import Data.String.Unsafe
 open import Data.Bool
 open import Data.Nat
 open import Data.Fin renaming (zero to fzero ; suc to fsuc) hiding (_+_)

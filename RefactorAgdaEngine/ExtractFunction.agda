@@ -3,6 +3,7 @@ open import Data.List
 open import ParseTree
 open import Data.Nat
 open import Data.String hiding (_++_)
+open import Data.String.Unsafe
 open import ScopeState using (ScopeState ; ScopeEnv ; replaceID ; liftIO ; getUniqueIdentifier)
 open import ScopeParseTree
 open import AgdaHelperFunctions

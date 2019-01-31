@@ -5,7 +5,9 @@ open import Data.Bool
 open import Data.List hiding ([_])
 open import Data.Nat
 open import Relation.Nullary
+-- open import Relation.Nullary.Decidable
 open import Data.String
+open import Data.String.Unsafe
 
 -- go from ((f a) b) representation to f [a, b]
 expressionToList : Expr -> List⁺ Expr
@@ -45,7 +47,7 @@ sameId (identifier name isInRange scope declaration) (identifier name₁ isInRan
 sameId (identifier name isInRange scope declaration) (identifier name₁ isInRange₁ scope₁ declaration₁) | no ¬p = false
 
 sameName : Identifier -> Identifier -> Bool
-sameName (identifier name isInRange scope declaration) (identifier name₁ isInRange₁ scope₁ declaration₁) = name₁ == name
+sameName (identifier name isInRange scope declaration) (identifier name₁ isInRange₁ scope₁ declaration₁) = name₁ == name -- ⌊ name₁ Data.String.Unsafe.≟ name ⌋
 
 _doesNotAppearInExp_ : Identifier -> Expr -> Bool
 x doesNotAppearInExp numLit = true

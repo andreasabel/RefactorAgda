@@ -4,7 +4,7 @@ open import Data.Maybe hiding (map)
 open import Data.List.NonEmpty
 open import ParseTreeOperations
 open import AgdaHelperFunctions
-open import Data.List
+open import Data.List hiding (head; tail)
 open import Data.Nat
 open import Data.Vec using (Vec)
 open import Data.Fin
